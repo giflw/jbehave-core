@@ -28,6 +28,10 @@ public class LocalizedKeywords extends Keywords {
     public LocalizedKeywords(Locale locale) {
         this(locale, DEFAULT_BUNDLE_NAME, DEFAULT_CLASS_LOADER);
     }
+    
+    public LocalizedKeywords(Locale locale, ClassLoader classLoader) {
+        this(locale, DEFAULT_BUNDLE_NAME, classLoader);
+    }
 
     public LocalizedKeywords(Locale locale, String bundleName, ClassLoader classLoader) {
         super(keywords(bundleName, classLoader, locale));
